@@ -1,0 +1,65 @@
+﻿@model Room
+@{
+}
+<div class="container" dir="rtl">
+    <div class="alert alert-success">تعديل بيانات الغرفة</div>
+
+    <form asp-action="UpdateRoom" method="post">
+        <input type="hidden" asp-for="@Model.Id" />
+		<div class="row">
+			<div class="col">
+				<label for="HotelsID" class="p-2">اختر الفندق</label>
+				<input type="text" id="HotelID" name="HotelID" class="form-control form-control-sm" readonly asp-for="@Model.HotelID" />
+
+            </div>
+		</div>
+		<div class="row">
+			<div class="col-sm-6">
+				<label for="Type" class="p-2"> نوع الغرفة </label>
+                <input type="text" id="Type" name="Type" class="form-control form-control-sm" required asp-for="@Model.Type" />
+
+
+			</div>
+			<div class="col-sm-6">
+				<label for="Description" class="p-2">  وصف الغرفة</label>
+                <input type="text" id="Description" name="Description" class="form-control form-control-sm" asp-for="@Model.Description" />
+
+
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-6">
+				<label for="RoomNum" class="p-2"> رقم الغرفة </label>
+                <input type="number" id="RoomNum" name="RoomNum" class="form-control form-control-sm" required asp-for="@Model.RoomNum" />
+
+
+			</div>
+			<div class="col-sm-6">
+				<label for="RoomPrice" class="p-2"> سعر الغرفة  </label>
+                <input type="text" id="RoomPrice" name="RoomPrice" class="form-control form-control-sm" required asp-for="@Model.RoomPrice" />
+
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<label for="Image" class="p-2"> الصورة </label>
+                <input type="text" id="Image" name="Image" class="form-control form-control-sm" required asp-for="@Model.Image" />
+			</div>
+
+		</div>
+
+		<div class="row mt-3">
+			<div class="col text-center">
+
+				<button class="btn btn-success" type="submit">حفظ</button>
+
+
+			</div>
+
+		</div>
+	</form>
+
+
+</div>
